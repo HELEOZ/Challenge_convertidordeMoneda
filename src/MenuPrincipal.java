@@ -1,8 +1,6 @@
 import javax.swing.*;
-
 public class MenuPrincipal {
     public static void main(String[] args) {
-        ConvertidorDivisas divisas = new ConvertidorDivisas();
         boolean seguir=true;
         while (seguir==true){
             String[] tipoConversor ={"Convertidor de Divisas","Convertidor de Temperatura"};
@@ -12,10 +10,13 @@ public class MenuPrincipal {
             try{
                 switch (Menu){
                     case 0:
-                        divisas.TiposdeDivisas();
+                        ConvertidorDivisas divisas = new ConvertidorDivisas();
+                        divisas.IngresarCantidad();
+
                         break;
                     case 1:
-
+                        ConvertidorTemperatura temperatura = new ConvertidorTemperatura();
+                        temperatura.IngresarTemperatura();
                         break;
                 }
             }
